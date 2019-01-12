@@ -108,7 +108,7 @@ var excelFilePath = "./NewExcelSheet.xlsx";
 //Display AllRecords
 //Get
 router.get('/allRecords',function(req, res){
-	Product.find({}).limit(10).exec((err,data) => {
+	Product.find({}).limit(100).exec((err,data) => {
 
 		if(err){
 			res.send(err);
